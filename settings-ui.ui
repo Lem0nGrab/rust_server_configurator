@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>861</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Verdana</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Rust server configure</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>188</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>World size in square meteres. The bigger you make your world the larger RAM you need</string>
+   </property>
+   <property name="title">
+    <string>World size</string>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <widget class="QComboBox" name="world_size">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>151</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>1000</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2000</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3000</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4000</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5000</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6000</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7000</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>188</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Server name</string>
+   </property>
+   <widget class="QLineEdit" name="server_name">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>170</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Dedicated Rust Server</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>188</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Server port</string>
+   </property>
+   <widget class="QSpinBox" name="server_port">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>151</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1024</number>
+    </property>
+    <property name="maximum">
+     <number>65535</number>
+    </property>
+    <property name="value">
+     <number>28015</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_4">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>31</y>
+     <width>188</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Server's seed. Makes your world unique.</string>
+   </property>
+   <property name="title">
+    <string>Server seed</string>
+   </property>
+   <widget class="QLineEdit" name="server_seed">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>151</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhDigitsOnly</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_5">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>100</y>
+     <width>188</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>IP address that server will listen on. 0.0.0.0 means all of availale IP addresses</string>
+   </property>
+   <property name="title">
+    <string>Listen address</string>
+   </property>
+   <widget class="QLineEdit" name="listen_address">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>151</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="text">
+     <string>0.0.0.0</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_6">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>170</y>
+     <width>188</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Interval in seconds showing how often your server will save current world state</string>
+   </property>
+   <property name="title">
+    <string>Saving interval (sec)</string>
+   </property>
+   <widget class="QSpinBox" name="saving_interval">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>151</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>100</number>
+    </property>
+    <property name="maximum">
+     <number>10000</number>
+    </property>
+    <property name="value">
+     <number>300</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_7">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>410</y>
+     <width>340</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Path to your server log file</string>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhNone</set>
+   </property>
+   <property name="title">
+    <string>Log file path</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <widget class="QLineEdit" name="server_log_path">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>311</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>.\server.log</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_8">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>240</y>
+     <width>188</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Maximum number of player that can be connected to the server</string>
+   </property>
+   <property name="title">
+    <string>Server max players</string>
+   </property>
+   <widget class="QSpinBox" name="server_max_players">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>151</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>250</number>
+    </property>
+    <property name="value">
+     <number>50</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_9">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>31</y>
+     <width>188</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>If you are planing to connect to your server's console remotely provide a password for security reasons.</string>
+   </property>
+   <property name="title">
+    <string>RCON Password</string>
+   </property>
+   <widget class="QLineEdit" name="rcon_passwd">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>170</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_10">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>310</y>
+     <width>188</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Server refresh rate. Not recomended to go above 30</string>
+   </property>
+   <property name="title">
+    <string>Server ticket rate</string>
+   </property>
+   <widget class="QSpinBox" name="server_ticket_rate">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>151</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>50</number>
+    </property>
+    <property name="value">
+     <number>10</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_11">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>31</y>
+     <width>188</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>This is your RCON server's IP address. 0.0.0.0 means RCON will listen on each available IP address on your server</string>
+   </property>
+   <property name="title">
+    <string>RCON address</string>
+   </property>
+   <widget class="QLineEdit" name="ip_addr">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>170</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0.0.0.0</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="start_server_button">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>430</y>
+     <width>102</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Start the server with current settings</string>
+   </property>
+   <property name="text">
+    <string>Start server</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancel_button">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>430</y>
+     <width>102</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_12">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>240</y>
+     <width>561</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Output command</string>
+   </property>
+   <widget class="QTextBrowser" name="result_box">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>541</width>
+      <height>101</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="new_window_button">
+   <property name="geometry">
+    <rect>
+     <x>674</x>
+     <y>150</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>New Window</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>result_box</sender>
+   <signal>textChanged()</signal>
+   <receiver>result_box</receiver>
+   <slot>reload()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>500</x>
+     <y>339</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>540</x>
+     <y>338</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
